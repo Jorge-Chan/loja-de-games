@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,7 +28,8 @@ public class Produtos {
 	@Size(min = 3, max = 100)
 	private String nome;
 
-	@NotBlank
+	
+	@Column(precision = 10, scale = 2)
 	private BigDecimal preco;
 
 	@NotNull
@@ -39,9 +41,8 @@ public class Produtos {
 	@Size(min = 3, max = 100)
 	private String fornecedor;
 
-	@NotBlank
-	private Boolean disponivel;
-
+	
+	@NotNull
 	@Size(min = 3, max = 100)
 	private String foto;
 
@@ -105,14 +106,7 @@ public class Produtos {
 		this.fornecedor = fornecedor;
 	}
 
-	public Boolean getDisponivel() {
-		return disponivel;
-	}
-
-	public void setDisponivel(Boolean disponivel) {
-		this.disponivel = disponivel;
-	}
-
+	
 	public String getFoto() {
 		return foto;
 	}
