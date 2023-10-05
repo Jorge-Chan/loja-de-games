@@ -2,6 +2,7 @@ package com.lojade.games.model;
 
 import java.math.BigDecimal;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
