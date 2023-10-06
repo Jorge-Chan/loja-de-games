@@ -40,7 +40,11 @@ public class Produtos {
 
 	@Size(min = 3, max = 100)
 	private String fornecedor;
-
+	
+	
+	@NotNull
+	private Boolean disponivel;
+	
 	
 	@NotNull
 	@Size(min = 3, max = 100)
@@ -113,6 +117,14 @@ public class Produtos {
 
 	public void setFoto(String foto) {
 		this.foto = foto;
+	}
+
+	public Boolean getDisponivel() {
+		return disponivel;
+	}
+
+	public void setDisponivel(Boolean disponivel) {
+		this.disponivel = disponivel;
 	}
 
 }
